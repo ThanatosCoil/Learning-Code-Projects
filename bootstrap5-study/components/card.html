@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>Cards</title>
+  </head>
+  <body>
+    <!-- Добавляем карточки, меняем их размер через добавление карт в оболочку из строк и столбцов, которые и меняем -->
+    <div class="row">
+      <div class="col-2">
+        <div class="card">
+          <h4 class="card-header">Header</h4>
+          <img
+            src="https://dummyimage.com/600x400/b039b0/ffffff.png&text=bvxn"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <h6 class="card-footer text-body-secondary">Footer</h6>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <!-- Или можно менять размер через утилиты для изменения размера. 50 в процентах-->
+    <div class="card w-50 mb-2">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+    <!-- Или можно просто обычным CSS воспользоваться -->
+    <div class="card" style="width: 24rem">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+    <hr />
+    <!-- Горизонтальная карточка -->
+    <div class="card mb-3" style="max-width: 800px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://dummyimage.com/600x400/3ab071/ffffff.png&text=gdsgds"
+            class="img-fluid rounded-start"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- Группы карточек -->
+    <div class="card-group w-50">
+      <!-- Меняем цвет бэкграунда -->
+      <div class="card text-bg-dark">
+        <img
+          src="https://dummyimage.com/600x400/1ca4c9/ffffff.png&text=%D0%B2%D0%B2%D0%B2"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <!-- Раздельно цвета + цвет границы -->
+      <div class="card text-dark bg-warning border-danger">
+        <img
+          src="https://dummyimage.com/600x400/1ca4c9/ffffff.png&text=%D0%B2%D0%B2%D0%B2"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This card has supporting text below as a natural lead-in to
+            additional content.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://dummyimage.com/600x400/1ca4c9/ffffff.png&text=%D0%B2%D0%B2%D0%B2"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

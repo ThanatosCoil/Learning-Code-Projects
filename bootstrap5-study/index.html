@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    Про брейкпоинты и контейнеры
+    <!-- Устанавливает max-width для разных брейкпоинтов, поэтому будет некоторый отступ -->
+    <div class="container border">Content</div>
+    <!-- Устанавливает max-width на 100% для всех брейкпоинтов -->
+    <div class="container-fluid border">Content</div>
+    <!-- Устанавливает max-width на 100% для тех брейкпоинтов, которые ниже установленного, в этом случае md (medium) -->
+    <div class="container-md border">Content</div>
+    <hr />
+
+    Про Гриды
+    <!-- Называется грид, но использует бустрап флексбокс, создавая структуру из рядов и колонок. 
+    Вычисляет ширину он сам под колличество колонок или рядов -->
+    <div class="container-md border">
+      <div class="row">
+        <!-- Можем настраивать размер отдельного элемента, остальные сами пересчитаются -->
+        <div class="col-1">Col 1</div>
+        <!-- Настраиваем брейкпоинт после которого заполнит все пространство, а до него задаем размер мануально -->
+        <div class="col-md-8">Col 2</div>
+        <!-- Можем их миксовать, теперь 3 юз кейса, пока lg размер 8, потом когда md размер 4, и потом автозаполнение -->
+        <div class="col-md-4 col-lg-8">Col 3</div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="container border">
+      <!-- Можем позиционировать элементы вертикально start, center, end например -->
+      <div class="row align-items-center" style="height: 200px">
+        <div class="col">1 of 3</div>
+        <div class="col">Variable width content</div>
+        <div class="col">3 of 3</div>
+      </div>
+    </div>
+    <div class="container border">
+      <!-- И горизонтально -->
+      <div class="row justify-content-between">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+      </div>
+    </div>
+    <hr />
+
+    Интервалы Gutters
+    <!-- my это margin по оси y, соответственно mx по иксу или просто m для общего margin-а -->
+    <div class="container my-5 text-center border">
+      <!-- gx меняет padding между элементом и row-ом чем больше тем меньше. а вот gy меняет по y-ку между самими row-ами -->
+      <div class="row gx-3 gy-3">
+        <div class="col-6"><div class="child">1</div></div>
+        <div class="col-6"><div class="child">2</div></div>
+        <div class="col-6"><div class="child">3</div></div>
+        <div class="col-6"><div class="child">4</div></div>
+      </div>
+    </div>
+    <hr />
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
