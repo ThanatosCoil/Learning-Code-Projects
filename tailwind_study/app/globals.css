@@ -1,0 +1,31 @@
+/* Импортировали шрифт */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Таилвинд группирует, потому что в CSS стили переписывают друг друга, по приоритетности. Вот их описание из дока:
+The base layer is for things like reset rules or default styles applied to plain HTML elements.
+The components layer is for class-based styles that you want to be able to override with utilities.
+The utilities layer is for small, single-purpose classes that should always take precedence over any other styles. */
+
+/* Добавили классический класс CSS */
+.my-style {
+  background-color: azure;
+}
+
+/*  Добавили новый класс в слой компонентов, также можно переписывать существующие. Apply чтобы использовать tailwind утилити */
+@layer components {
+  .new-style {
+    @apply bg-slate-600;
+    @apply text-white;
+  }
+}
+
+/* Поменяли шрифт по умолчанию у всего документа */
+@layer base {
+  html {
+    font-family: "Montserrat", serif;
+  }
+}
