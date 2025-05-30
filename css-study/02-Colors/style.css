@@ -1,0 +1,19 @@
+body {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: papayawhip;
+  color: rgb(0, 0, 0); /* Красный Зеленый Синий */
+}
+
+.one {
+  color: rgba(0, 0, 0, 0.501); /* Красный Зеленый Синий Прозрачность */
+}
+
+.two {
+  color: #8d1717; /*HEX кодировка Красный Зеленый Синий */
+}
+
+.three {
+  color: hsl(112, 50%, 50%); /* Оттенок(цвет) Насыщенность Яркость*/
+}

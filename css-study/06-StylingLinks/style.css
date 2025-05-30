@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none; /* Убрали подчеркивание у ссылок */
+}
+
+a:visited {
+  /* Псевдоклассы через : */
+  color: chartreuse;
+}
+
+a:hover,
+a:focus {
+  color: dodgerblue;
+}
