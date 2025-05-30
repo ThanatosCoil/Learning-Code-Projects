@@ -1,0 +1,50 @@
+@use "../custom" as c;
+
+.services {
+  position: relative;
+  padding: 1rem 0 0 0;
+
+  &__content {
+    position: relative;
+    padding: 1rem;
+    margin-top: 0;
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    p {
+      font-size: 0.8rem;
+
+      @include c.media-breakpoint-up(lg) {
+        font-size: 1rem;
+      }
+    }
+
+    svg.me-2 {
+      @include c.media-breakpoint-down(lg) {
+        height: 1.1rem;
+        width: 1.1rem;
+        margin-top: 0.4rem;
+      }
+    }
+  }
+
+  &__content:nth-child(2) {
+    background-color: red;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}
+
+.services:nth-child(2) .services__content {
+  @include c.media-breakpoint-up(lg) {
+    margin-left: 4rem;
+  }
+
+  @include c.media-breakpoint-up(md) {
+    margin-left: 2rem;
+  }
+}

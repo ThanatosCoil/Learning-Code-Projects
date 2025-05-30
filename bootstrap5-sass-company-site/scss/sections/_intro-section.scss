@@ -1,0 +1,46 @@
+@use "../custom" as c;
+@use "../components/mixins" as m;
+
+.intro-section {
+  @include m.gradient;
+  padding: 10rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.intros {
+  .video-box {
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 31%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      span {
+        svg {
+          color: c.$purple;
+        }
+      }
+    }
+  }
+}
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border: 0.3rem solid c.$pink-light;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+
+  &--border-1 {
+    animation-delay: 1s;
+  }
+
+  &--border-2 {
+    animation-delay: 1.5s;
+  }
+}

@@ -1,0 +1,24 @@
+@use "../custom" as c;
+@use "../components/mixins" as m;
+
+.menu {
+  @include m.gradient;
+
+  li {
+    padding: 0 0.7rem;
+
+    a {
+      color: c.$white !important;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
+
+  button {
+    span {
+      svg {
+        @include m.absoluteCenter;
+      }
+    }
+  }
+}

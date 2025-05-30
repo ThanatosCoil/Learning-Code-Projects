@@ -1,0 +1,28 @@
+@use "../custom" as c;
+
+// Mixin для градиента
+
+@mixin gradient {
+  background: linear-gradient(
+    100deg,
+    rgba(c.$primary, 0.95) 40%,
+    rgba(162, 61, 181, 1) 75%,
+    rgba(c.$secondary, 0.95) 100%
+  );
+}
+
+// Центрирование
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Скорость анимации
+
+@mixin transitionProperty {
+  transition-duration: 1000ms;
+  transition-property: all;
+}
