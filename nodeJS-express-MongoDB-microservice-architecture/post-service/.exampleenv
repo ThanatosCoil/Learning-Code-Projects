@@ -1,0 +1,7 @@
+PORT=3002
+MONGO_URI=
+JWT_SECRET=272BC442C34A758E91B4EA9892EA3 #Только тут такое маленькое. В разработке надо использовать длинную неугадываемую строку 
+NODE_ENV=development
+REDIS_HOST=redis
+REDIS_PORT=6379
+RABBITMQ_URL=amqp://localhost:5672

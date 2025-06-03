@@ -1,0 +1,9 @@
+PORT=3001 # На 3000 всегда будет api-gateway, который будет перенаправлять
+MONGO_URI=
+JWT_SECRET=272BC442C34A758E91B4EA9892EA3 #Только тут такое маленькое. В разработке надо использовать длинную неугадываемую строку 
+JWT_LIFETIME=30d
+NODE_ENV=development
+REDIS_URL=redis://localhost:6379
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=

@@ -1,0 +1,43 @@
+@use "base";
+
+.newItemEntry {
+  /* Вложенная структура. Настройки примененные к вложенным элементам даже с глобальным обращение типа button будут применены только к вложенному элементу */
+  position: sticky;
+  top: 0; /* С помощью этих двух настроек секция с добавление новой задачи не проскролится если список будет длинный */
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+
+  form {
+    display: flex;
+    justify-content: space-between; /* С этими настройками кнопка и инпут отойдут на разные края насколько возможно */
+
+    label {
+      position: absolute;
+      left: -10000px; /*  Уберет лейбл с экрана, для обычного пользователя ничего не будет, а сам лейбл нужен для скрин ридеров, они когда табаться будут смогут его прочитать */
+    }
+
+    input[type="text"] {
+      /* Сделали более специфичный выбор по типу инпута */
+      width: 80%;
+      font-size: 1.25rem;
+      border: 2px solid base.$textbox-bordercolor;
+      border-radius: 10px;
+      padding: 0.75rem;
+      outline: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="text"]:hover {
+      box-shadow: 4px 2px 5px #000;
+    }
+
+    button {
+      font-size: 1.25rem;
+      background-color: base.$add-button-color;
+      padding: 0.75rem;
+      @include base.mq(768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

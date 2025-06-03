@@ -1,0 +1,7 @@
+cloud_name=
+api_key= 
+api_secret=
+PORT=3003
+MONGO_URI=
+NODE_ENV=development
+RABBITMQ_URL=amqp://localhost:5672

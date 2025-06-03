@@ -1,0 +1,10 @@
+[class*="col"] {
+  padding: 1rem;
+  background-color: #33b5e5;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.child {
+  background-color: #2041d3;
+}

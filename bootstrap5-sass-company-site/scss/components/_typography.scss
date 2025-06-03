@@ -1,0 +1,77 @@
+@use "../custom" as c;
+
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+
+  &--intro {
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  &--description {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    text-transform: none;
+    margin-top: 1.2rem;
+
+    @include c.media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+      display: inline-block;
+    }
+  }
+}
+
+// Линия для heading
+
+.heading-line::before {
+  content: "";
+  margin: auto;
+  width: 10rem;
+  height: 1px;
+  display: block;
+  background-color: c.$primary;
+}
+
+.heading-line::after {
+  content: "";
+  margin: 0.1rem auto 1rem;
+  width: 8rem;
+  height: 1px;
+  display: block;
+  background-color: c.$primary;
+}
+
+//  Display-3
+
+.display-3 {
+  font-family: "Montserrat", sans-serif;
+
+  &--title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    background-image: linear-gradient(to right, c.$secondary, c.$pink);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include c.media-breakpoint-up(lg) {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Border right
+
+.border-right {
+  border-right: 0.1rem solid c.$gray-400;
+  height: 100%;
+}
+
+.gradient {
+  background: linear-gradient(to right, c.$secondary, c.$pink);
+}

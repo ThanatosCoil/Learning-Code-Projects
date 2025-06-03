@@ -1,0 +1,46 @@
+# Node modules
+node_modules
+
+# Build output
+dist
+build
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# OS generated files
+.DS_Store
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Игнорировать папку node_modules
+# Игнорировать выходные файлы сборки
+# Игнорировать файлы переменных окружения
+# Игнорировать логи
+# Игнорировать системные файлы
+# Игнорировать папки и файлы настроек IDE
+# Игнорировать отчёты о покрытии тестами
+# Игнорировать временные файлы

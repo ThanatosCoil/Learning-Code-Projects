@@ -1,0 +1,73 @@
+/* Functions: */
+
+:root {
+  --BGCOLOR: #475569;
+  --FONT-COLOR: #fff;
+  --DARK-COLOR: #000;
+  --FF: Arial, Helvetica, sans-serif;
+
+  /* Выбирает наименьшее из двух, в данном случае, при изменении ширины экрана размер шрифта будет уменьшаться, т.к. vw будет становится меньше, но за счет значения в rem оно не будет выше него */
+  /* Есть обратное - max(num1,num2) которое выбирает максимальное из двух */
+  --FS-XL: min(4rem, 5vw);
+  /* Но есть более новая функция для этого clamp(num1,num2,num3). num1 - минимум а num2 - идеальное значение и num3-максимум */
+  /* Т.е. будет уменьшаться до минимума или расширяться до максимума */
+  --FS: clamp(1.5rem, 3vw, 3rem);
+  --SHADOWS: 0 8px 15px -5px var(--DARK-COLOR);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: #4d3b3be6;
+    --FONT-COLOR: #ffffffe9;
+  }
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--BGCOLOR);
+  border: 4px solid var(--DARK-COLOR);
+  box-shadow: var(--SHADOWS);
+}
+
+h1,
+h3 {
+  color: var(--FONT-COLOR);
+  font: var(--FS-XL) var(--FF);
+  text-align: center;
+  text-shadow: 2px 2px 3px black;
+}
+
+.highlight {
+  --ALT-BGCOLOR: red;
+  font: var(--FS) var(--FF);
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.text {
+  margin: 1rem;
+  border: 4px solid var(--DARK-COLOR);
+  font: var(--FS) var(--FF);
+}
+
+a:any-link {
+  color: rosybrown;
+}
+
+a:hover,
+a:focus {
+  /* Делает более ярким или темным */
+  filter: brightness(150%);
+}
+
+a:hover::after {
+  content: attr(data-tooltip);
+}
+
+@media screen and (min-width: 576px) {
+  .text {
+    /* Вычисляет значение */
+    width: calc(70% - 100px);
+  }
+}

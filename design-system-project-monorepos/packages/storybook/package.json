@@ -1,0 +1,26 @@
+{
+  "name": "@thanatos/storybook",
+  "packageManager": "yarn@4.6.0",
+  "private": true,
+  "dependencies": {
+    "@thanatos/foundation": "workspace:^",
+    "@thanatos/react": "workspace:^"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "3.2.4",
+    "@storybook/addon-essentials": "8.5.3",
+    "@storybook/addon-interactions": "8.5.3",
+    "@storybook/addon-onboarding": "8.5.3",
+    "@storybook/blocks": "8.5.3",
+    "@storybook/react": "8.5.3",
+    "@storybook/react-vite": "8.5.3",
+    "@storybook/test": "8.5.3",
+    "storybook": "8.5.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
+}

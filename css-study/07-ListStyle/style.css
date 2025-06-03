@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ol {
+  list-style-type: none; /* Меняем символы элементов сортировки */
+  padding: 0;
+}
+
+ul {
+  text-align: center;
+  list-style-position: outside;
+  line-height: 1.5;
+  list-style-image: url("");
+}
+
+ul li:nth-child(3) {
+  color: red;
+}
+
+ul ::marker {
+  color: blue;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only 5$";
+}

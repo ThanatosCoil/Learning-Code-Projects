@@ -1,0 +1,38 @@
+/* Variables: */
+
+:root {
+  /* Все наследует от root так что переменные закидываем сюда чтобы они были доступны в каждом элементе */
+  /* В переменную можно положить любое значение: цвет, стили и размеры и другие переменные  */
+  --BGCOLOR: #475569;
+  --FONT-COLOR: #fff;
+  --DARK-COLOR: #000;
+  --FF: Arial, Helvetica, sans-serif;
+  --FS: 2rem;
+  --FS-XL: 4rem;
+  --SHADOWS: 0 8px 15px -5px var(--DARK-COLOR);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Если в системе предпочитаемае тема - темная, будут применяться эти настройки, переписывая значения переменных (можно там ввести новые и их использовать) */
+  :root {
+    --BGCOLOR: #4d3b3be6;
+    --FONT-COLOR: #ffffffe9;
+  }
+}
+
+body {
+  background-color: var(--BGCOLOR);
+  border: 4px solid var(--DARK-COLOR);
+  box-shadow: var(--SHADOWS);
+}
+
+h1,
+h3 {
+  color: var(--FONT-COLOR);
+  font: var(--FS-XL) var(--FF);
+  text-align: center;
+}
+
+.highlight {
+  --ALT-BGCOLOR: red; /* Обратились к значению переменной которая есть у класса */
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  /* font-family: Arial, Helvetica, sans-serif; */ /* Тут мы задаем шрифт какой хотим, но если его не будет у юзера, то попробуется следующий и потом следующий после него */
+  /* На google fonts можно найти внешние стили скопировать link в html или импортом */
+  font-family: "Roboto", sans-serif;
+}
+
+/* input,
+button {
+  font: inherit; По умолчанию не наследуют
+} */
+
+p {
+  text-decoration: underline;
+  text-transform: capitalize;
+  /* text-align: justify; */
+  text-indent: 1em; /* Отступ первого абзаца */
+  line-height: 1.5; /* Место между строками */
+  letter-spacing: 0.1em; /* Пробел между буквами */
+  word-spacing: 0.3em; /* Пробел между словами */
+  font-weight: 500;
+  font-style: italic;
+}

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* * {
+  background-color: #3c3c3c;
+  color: #fff;
+} */
+
+div {
+  background-color: #3c3c3c;
+  color: #fff;
+}
